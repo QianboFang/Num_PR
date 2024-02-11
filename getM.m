@@ -6,9 +6,12 @@ global const
 n = const.n;
 Mbar = getMbar();
 
-M=zeros(2*n+2); 
+M = zeros(2*n+2); 
 for i=1:n
     M(2*i-1:2*i+2, 2*i-1:2*i+2)=M(2*i-1:2*i+2, 2*i-1:2*i+2) + Mbar(:,:,1);
 
 end
+
+M = sparse(M);
+
 end
