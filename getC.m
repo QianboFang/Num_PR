@@ -1,4 +1,8 @@
-function C = getC(B,n)
+function C = getC()
+
+global const
+n = const.n;
+B = const.B;
 
 N = 2*n + 2; % maximale Anzahl an Dirichlet-NB
 
