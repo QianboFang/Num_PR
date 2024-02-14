@@ -3,13 +3,24 @@ global const
 %-------------------------------------------------------------------------
                            % Aufgabe 5 b %
 %-------------------------------------------------------------------------
+
+% Holen der Konstanten
 n = const.n;
+N = 2*n+2;
+
+% Holen von Sbar
 Sbar = getSbar();
 
-S=zeros(2*n+2); 
-for i=1:n
-    S(2*i-1:2*i+2, 2*i-1:2*i+2)=S(2*i-1:2*i+2, 2*i-1:2*i+2)+ Sbar(:,:,1);
-end
-S = sparse(S);
+% Holen der Indizes
+[i_tilde_2d, l_2d, lli_2d, i_tilde_3d, j_tilde_3d, l_3d, lli_3d, llj_3d] = getindizes();
+
+% Umformen der dreidimensionalen Matrizen zu Spaltenvektoren
+lli_3d_vec = reshape(lli_3d, [], 1);
+llj_3d_vec = reshape(llj_3d, [], 1);
+Sbar_vec = reshape(Sbar, [], 1);
+
+% Erstellung der dünnbesetzten Matrix mit Hilfe der sparse-Funktion
+S = sparse(lli_3d_vec+1, llj_3d_vec+1, Sbar_vec, 8, 8);
+S = full(S);
 
 end
