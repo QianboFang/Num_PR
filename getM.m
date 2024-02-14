@@ -20,7 +20,6 @@ llj_3d_vec = reshape(llj_3d, [], 1);
 Mbar_vec = reshape(Mbar, [], 1);
 
 % Erstellung der dünnbesetzten Matrix mit Hilfe der sparse-Funktion
-M = sparse(lli_3d_vec+1, llj_3d_vec+1, Mbar_vec, 8, 8);
-M = full(M);
+M = sparse(lli_3d_vec+1, llj_3d_vec+1, Mbar_vec, N, N);
 
 end
