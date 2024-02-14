@@ -18,7 +18,7 @@ qbar = getqbar();
 qbar_vec = reshape(qbar, [], 1);
 
 % Erstellung der dünnbesetzten Matrix mit Hilfe der sparse-Funktion
-vq = sparse(lli_2d+1, 1, qbar_vec, 8, 1);
+vq = sparse(lli_2d+1, 1, qbar_vec, N, 1);
 vq = full(vq);
 
 end
