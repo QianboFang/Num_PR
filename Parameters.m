@@ -4,7 +4,6 @@ global const
 
 const = struct();
 
-
 % Initialisierung der Startswerte
 const.n = 3;         % Anzahl der Elemente in 1
 const.n_hat = 1;      % Anzahl der zusätzlichen Auswertungspunkte je Element
@@ -19,7 +18,7 @@ const.E = 1;          % Elastizitätsmodul in N/m^2
 const.I = 1;        % Flächenträgheitsmoment in m^4
 const.h = const.l/const.n; % Äquidistante Knoten/ die Elementbreite
 const.q = 1 ;       % Streckenlast in N/m 
-
+const.sys_DOF = (const.n +1)*2;  % Freiheitsgrade des Gesamtsystems
 const.B = [0 1 0;
             0 2 0;
       const.n 3 0;
