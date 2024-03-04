@@ -1,4 +1,4 @@
-function phi = getphi()
+function [phi, phi4di, phi4dj, phi3di_v] = getphi()
 global const
 
 % Aufgabe 17 
