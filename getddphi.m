@@ -1,4 +1,4 @@
-function ddphi = getddphi()
+function [ddphi, ddphi4di, ddphi4dj, ddphi3di_v] = getddphi()
 global const
 
 % AUfgabe 17 
