@@ -5,8 +5,8 @@ global const
 
 n = const.n;
 
-l0 = 0:n-1;
-i0 = 0:3;
+l0 = 1:n;
+i0 = 1:4;
 
 [i_tilde_2d,l_2d] = ndgrid(i0,l0);
 lli_2d =2*l_2d+i_tilde_2d;
