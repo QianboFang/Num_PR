@@ -1,11 +1,23 @@
-function M_bar=getMbar2(n,mu,l,n_tilde)
+function M_bar=getMbar2()
+global const
 
-% Aufgabe 19 
-[~, Tinv_4d, ~] = getTinv(n,l,n_tilde);
-[~, phi4di, phi4dj, ~] = getphi(n_tilde,n);
-[~,h_l3d,~] = geth(n,l);
+
+
+
+%% Aufgabe 19 
+
+n = const.n;
+mu = const.mufun;
+l = const.l;
+n_tilde = const.n_tilde;
+
+
+
+[~, Tinv_4d, ~] = getTinv();
+[~, phi4di, phi4dj, ~] = getphi();
+[~,h_l3d,~] = geth();
 [~, expij] = getexp;
-[~, ~, s_4d] = getstencil(n_tilde);
+[~, ~, s_4d] = getstencil();
 
 
 
