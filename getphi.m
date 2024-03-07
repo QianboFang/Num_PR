@@ -3,7 +3,7 @@ global const
 
 % Aufgabe 17 
 n_tilde = const.n_tilde;
-n = conct.n;
+n = const.n;
 
 phi_1 = @(x) 1 - 3.*x.^2 + 2.*x.^3;
 phi_2 = @(x) x - 2.*x.^2 + x.^3;

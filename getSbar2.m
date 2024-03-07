@@ -1,3 +1,5 @@
+getSbar2(1,1,3,1,7)
+
 function S_bar= getSbar2(E,I,n,l,n_tilde)
 
 % Aufgabe 19 
@@ -14,3 +16,4 @@ h = h_l3d.^exp;
 S_bar = h.*int;
 
 end
+
